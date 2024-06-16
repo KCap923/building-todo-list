@@ -17,8 +17,12 @@ function ToDoList() {
   function handleInputChange(event) {
     setNewTask(event.target.value);
   }
-  function addTask() {}
+  function addTask() {
+    setTasks([task, newTask]);
+    setNewTask("");
+  }
   function deleteTask(index) {}
+  
   function editTask(index) {}
 
   return (
@@ -32,8 +36,7 @@ function ToDoList() {
           value={newTask}
           onChange={handleInputChange}/>
 
-        <button className="add-button"> Add </button>
-        <button className="edit-button"> Edit </button>
+          <button className="add-button"> Add </button>
       </div>
 
       <ul>

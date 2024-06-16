@@ -1,29 +1,40 @@
+body{
+  background-color: #5e7b8f;
+
+}
+
 .to-do-list{
 font-family: Georgia, 'Times New Roman', Times, serif;
 text-align: center;
 margin: 50px;
-border: 20px double #3F3B6C;
-background-color: #A3C7D6;
+border: 18px double #c4778a;
+background-color: #e2d1cf;
 }
 
 h1{
-  color: #624F82;
+  color: #f29441;
   display: flex;
   justify-content: center;
   font-size: 50px
 }
 
+.text {
+  flex:auto;
+}
+
 input {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
-  color: #624F82;
+  color: #91ac98;
   opacity: 80%;
   padding: 5px;
+  border: 2px solid #637c94;
 }
 
 ul{
-color: #B784B7;
-padding: 20px;
+color: #706385;
+padding: 30px;
+margin: 15px;
 list-style: square;
 list-style-position: inside;
 }
@@ -32,24 +43,42 @@ ul li {
   background: whitesmoke;
   opacity: 90%;
   margin: 8px;
-  padding: 4px; 
+  padding: 10px; 
   font-weight: bold;
-  font-size: 18px;
+  font-size: 25px;
   display: flex;
   align-items: center;
   justify-content: start;
-
+  border: 2px solid #637c94;
 }
 
 button{
   color: #624F82;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 15px;
-  margin: 5px;
+  font-size: 25px;
+  margin: 10px;
+  border: 1px solid #3F3B6C;
+}
+
+.add-button {
+  background-color: #608a6b;
+  color: antiquewhite;
+
+}
+
+.edit-button {
+  background-color: #fa6d4d;
+  color: antiquewhite;
+
+}
+
+.delete-button {
+  background-color: #fa432a;
+  color: antiquewhite;
 }
 
 #check-box{
   margin: 10px;
   height: 18px;
-  width: 20px;
+  width: 25px;
 }
