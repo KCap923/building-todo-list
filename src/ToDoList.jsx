@@ -22,21 +22,33 @@ function ToDoList() {
     setTasks([tasks, newTask]);
     setNewTask("");
   }
-    {/*Add function*******************************************************************************/ }
+    {/*Delete function*******************************************************************************/ }
   function deleteTask(index) {
     const updatedTasks = tasks.filter((_, i) => i !== index);
     setTasks(updatedTasks);
   }
-    {/*Add function*******************************************************************************/ }
+    {/*Edit function*******************************************************************************/ }
   function editTask(index) {
-
-
+setIsEditing(index);
+setEditText(tasksp[index]);
   }
+  function handleEditChange(event) {
+    setEditText(event.target.value);
+  }
+
+  function saveEditTask(index) {
+    const updatedTasks = tasks.map((task, i) => (i === index ? editText : task));
+    setTasks(updatedTasks);
+    setIsEditing(null);
+    setEditText("");
+  }
+
 
   return (
     <div className="to-do-list">
       <h1> To-Do List </h1>
 
+{/* Add Task ***************************************************************************************/}
       <div>
         <input
           type="text"
@@ -44,7 +56,7 @@ function ToDoList() {
           value={newTask}
           onChange={handleInputChange}/>
 
-          <button className="add-button"> Add </button>
+          <button className="add-button" onClick={addTask}> Add </button>
       </div>
 
       <ul>
@@ -64,7 +76,6 @@ function ToDoList() {
             <button className="delete-button" onClick={() => deleteTask(index)}>
               Delete
             </button>
-
           </li>
         ))}
       </ul>
