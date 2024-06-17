@@ -17,13 +17,21 @@ function ToDoList() {
   function handleInputChange(event) {
     setNewTask(event.target.value);
   }
+  {/*Add function*******************************************************************************/ }
   function addTask() {
-    setTasks([task, newTask]);
+    setTasks([tasks, newTask]);
     setNewTask("");
   }
-  function deleteTask(index) {}
-  
-  function editTask(index) {}
+    {/*Add function*******************************************************************************/ }
+  function deleteTask(index) {
+    const updatedTasks = tasks.filter((_, i) => i !== index);
+    setTasks(updatedTasks);
+  }
+    {/*Add function*******************************************************************************/ }
+  function editTask(index) {
+
+
+  }
 
   return (
     <div className="to-do-list">
